@@ -1,4 +1,18 @@
 # Local Development API Server
+
+## Table of Content
+- [**Usage**](#usage)
+- [**Architecture**](#architecture)
+- [**Getting Started**](#getting-started)
+- [**Endpoints**](#endpoints)
+    - [GET Ednpoints](#get-endpoints)
+    - [POST Ednpoints](#post-endpoints)
+    - [PUT Ednpoints](#put-endpoints)
+    - [DELETE Ednpoints](#delete-endpoints)
+- [**Contributors**](#contributors)
+- [**Contributing**](#contributing)
+
+
 ## Usage
 #### Get Restaurants
 ```
@@ -14,11 +28,6 @@ Local server
 - Node.js
 - Sails.js
 
-## Contributors
-
-- [Brandy Lee Camacho - Technical Project Manager](mailto:brandy.camacho@udacity.com)
-- [David Harris - Web Services Lead](mailto:david.harris@udacity.com)
-- [Omar Albeik - Frontend engineer](https://github.com/omaralbeik)
 
 ## Getting Started
 
@@ -133,6 +142,15 @@ http://localhost:1337/reviews/<review_id>
 http://localhost:1337/reviews/<review_id>
 ```
 
+
+## Contributors
+
+- [Brandy Lee Camacho - Technical Project Manager](mailto:brandy.camacho@udacity.com)
+- [David Harris - Web Services Lead](mailto:david.harris@udacity.com)
+- [Omar Albeik - Frontend engineer](https://github.com/omaralbeik
+
+
+## Contributing
 
 If you find a bug in the source code or a mistake in the documentation, you can help us by
 submitting an issue to our [Waffle Dashboard](https://waffle.io/udacity/mwnd-issues). Even better you can submit a Pull Request with a fix :)
