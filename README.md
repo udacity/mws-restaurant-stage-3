@@ -147,7 +147,7 @@ http://localhost:1337/reviews/<review_id>
 
 - [Brandy Lee Camacho - Technical Project Manager](mailto:brandy.camacho@udacity.com)
 - [David Harris - Web Services Lead](mailto:david.harris@udacity.com)
-- [Omar Albeik - Frontend engineer](https://github.com/omaralbeik
+- [Omar Albeik - Frontend engineer](https://github.com/omaralbeik)
 
 
 ## Contributing
