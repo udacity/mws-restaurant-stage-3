@@ -18,7 +18,7 @@ Local server
 
 - [Brandy Lee Camacho - Technical Project Manager](mailto:brandy.camacho@udacity.com)
 - [David Harris - Web Services Lead](mailto:david.harris@udacity.com)
-- [Omar Albeik - Frontend engineer](mailto:omaralbeik@gmail.com)
+- [Omar Albeik - Frontend engineer](https://github.com/omaralbeik)
 
 ## Getting Started
 
@@ -43,9 +43,7 @@ Let's start with running commands in your terminal, known as command line interf
 ```Start server
 # node server
 ```
-### You should now have access to your API server environment
-debug: Environment : development
-debug: Port        : 1337
+### You should now have access to your API server environment via port `1337`
 
 
 ## Endpoints
@@ -80,11 +78,6 @@ http://localhost:1337/reviews/
 #### Get a restaurant review by id
 ```
 http://localhost:1337/reviews/<review_id>
-```
-
-#### Get all reviews for a restaurant
-```
-http://localhost:1337/reviews/?restaurant_id=<restaurant_id>
 ```
 
 
