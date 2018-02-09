@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media (max-width: 320px) {
+  #restaurants-list {
+    grid-template-columns: repeat(auto-fill, 280px);
+  }
+  #restaurants-list li {
+    width: 200px;
+  }
+}
+
+@media (max-width: 375px) {
+  .filter-options {
+    flex-direction: column;
+  }
+  .filter-options h2 {
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  .filter-options select {
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    text-align-last: center;
+  }
+}
+
+@media (max-width: 375px) {
+  #restaurants-list {
+    grid-template-columns: repeat(auto-fill, 350px);
+  }
+}
+
+@media (max-width: 425px) {
+  #breadcrumb {
+		width: 100%;
+	}
+	.inside main {
+		margin-bottom: 0;
+	}
+	.inside #footer {
+	  position: relative;
+	  width: 100%;
+		padding: 10px 0;
+	}
+	.inside #map-container {
+	  position: fixed;
+	  top: 80px;
+	  width: 100%;
+		height: 200px;
+	}
+	#restaurant-info-container {
+		width: 100%;
+		margin-top: 270px;
+	}
+}

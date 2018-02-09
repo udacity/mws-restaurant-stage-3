@@ -1,0 +1,22 @@
+{
+  "short_name": "restaurants",
+  "name": "mws-restaurant-stage-3",
+  "icons": [
+    {
+      "src": "img/app-icon.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "img/app-icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#252831",
+  "orientation": "portrait",
+  "theme_color": "#252831"
+}
