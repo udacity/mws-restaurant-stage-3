@@ -101,6 +101,36 @@ class DBHelper {
   }
 
   /**
+   * Fetch all reviews.
+   */
+  static fetchReviews(callback) {
+    fetch(`${DBHelper.DATABASE_URL}/reviews`)
+      .then(res => res.json())
+      .then(reviews => {
+        callback(null, reviews);
+      })
+      .catch(err => {
+        const error = `Request failed. Returned status of ${err.status}`;
+        callback(error, null);
+      })
+  }
+
+  /**
+   * Fetch reviews by id.
+   */
+  static fetchReviewsById(id, callback) {
+    fetch(`${DBHelper.DATABASE_URL}/reviews/?restaurant_id='${id}'`)
+      .then(res => res.json())
+      .then(review => {
+        callback(null, review);
+      })
+      .catch(err => {
+        const error = `Request failed. Returned status of ${err.status}`;
+        callback(error, null);
+      })
+  }
+
+  /**
    * Fetch a restaurant by its ID.
    */
   static fetchRestaurantById(id, callback) {
