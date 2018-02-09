@@ -58,7 +58,7 @@ const fetchReviewsFromURL = (callback) => {
     error = 'No review id in URL'
     callback(error, null);
   } else {
-    DBHelper.fetchReviewsById(id, (error, reviews) => {
+    DBHelper.fetchReviewsByRestaurantId(id, (error, reviews) => {
       self.reviews = reviews;
       if (!reviews) {
         fillReviewsHTML(null);
