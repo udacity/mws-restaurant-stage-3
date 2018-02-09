@@ -10,8 +10,7 @@ const browserSync = require('browser-sync').create();
 gulp.task('css', () => {
   return gulp.src('css/*.css')
     .pipe(cleanCSS({ level: 2 }))
-    .pipe(concat('bundle.css'))
-    .pipe(rename('bundle.min.css'))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.reload({ stream: true }));
 });
@@ -40,6 +39,7 @@ gulp.task('serve', function() {
 
 gulp.task('watch', ['serve'], function () {
   gulp.watch('css/*.css', ['css']);
+  gulp.watch('dist/css/*.min.css', ['css']);
   gulp.watch('js/*.js', ['js']);
   gulp.watch('*.html', browserSync.reload);
 });

@@ -9,7 +9,9 @@
   <title>Restaurant Info</title>
   <link rel='manifest' href='manifest.json'>
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-  <link rel="stylesheet" href="dist/css/bundle.min.css">
+  <link rel="stylesheet" href="dist/css/styles.min.css">
+  <link rel="stylesheet" href="dist/css/restaurant-info.min.css">
+  <link rel="stylesheet" href="dist/css/media.min.css">
 </head>
 
 <body class="inside">
@@ -39,8 +41,27 @@
       </section>
 
       <section id="reviews-container">
+        <h3>Reviews</h3>
+
+        <section id="restaurant-review-form">
+          <form onsubmit="return reviewRestaurant();" id="review-form">
+            <input type="text" placeholder="Enter your name" id="review-name">
+            <select name="review-rating" id="review-rating">
+              <option value="none" disabled selected>Select Rating</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <textarea name="review-comment" id="review-comment" rows="5" placeholder="Tell us what you think"></textarea>
+            <input type="submit">
+          </form>
+        </section>
+
         <ul id="reviews-list"></ul>
       </section>
+
     </section>
   </main>
 

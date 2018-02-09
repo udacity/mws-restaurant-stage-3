@@ -162,6 +162,9 @@ class DBHelper {
     fetch(url)
       .then(res => res.json())
       .then(reviews => {
+        reviews = reviews.sort(function(a, b) {
+          return new Date(b.createdAt) - new Date(a.createdAt);
+        });
         DBHelper.createReviewsStore(id, reviews);
         callback(null, reviews);
       })
@@ -290,7 +293,7 @@ class DBHelper {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
-    return (`./img/${restaurant.photograph}.jpg`);
+    return (`./img/${restaurant.photograph}.webp`);
   }
 
   /**

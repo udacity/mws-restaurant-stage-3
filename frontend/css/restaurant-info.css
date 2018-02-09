@@ -161,3 +161,39 @@
 #restaurant-hours td {
   color: #666;
 }
+
+#restaurant-review-form {
+  margin-bottom: 30px;
+}
+
+#review-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#review-form input {
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+#review-form select {
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+#review-form textarea {
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+#review-form input[type="submit"] {
+  height: 35px;
+  font-size: 14px;
+  background-color: #185a8e;
+  color: #fff;
+  border: 0;
+}

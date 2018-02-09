@@ -125,9 +125,6 @@ const fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hour
  */
 const fillReviewsHTML = (reviews = self.reviews) => {
   const container = document.getElementById('reviews-container');
-  const title = document.createElement('h3');
-  title.innerHTML = 'Reviews';
-  container.appendChild(title);
 
   if (!reviews) {
     const noReviews = document.createElement('p');
@@ -190,4 +187,33 @@ const getParameterByName = (name, url) => {
   if (!results[2])
     return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+const reviewRestaurant = (restaurant = self.restaurant) => {
+  let id = restaurant.id;
+  let name = document.getElementById("review-name").value;
+  let rating = document.getElementById("review-rating").value;
+  let message = document.getElementById("review-comment").value;
+
+  if (name != "" && message != "") {
+    let review = {
+      restaurant_id: id,
+      name: name,
+      rating: rating,
+      comments: message,
+    }
+
+    fetch(`${DBHelper.DATABASE_URL}/reviews`, {
+      method: 'post',
+      body: JSON.stringify(review)
+    })
+    .then(res => res.json())
+    .catch(error => {
+      console.log('Something went wrong submitting your review');
+    });
+
+    window.location.reload();
+  }
+
+  return false;
 }
