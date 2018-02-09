@@ -46,6 +46,30 @@ const fetchRestaurantFromURL = (callback) => {
 }
 
 /**
+ * Get restaurant reviews from page URL.
+ */
+const fetchReviewsFromURL = (callback) => {
+  if (self.reviews) { // review already fetched!
+    callback(null, self.reviews)
+    return;
+  }
+  const id = getParameterByName('id');
+  if (!id) { // no id found in URL
+    error = 'No review id in URL'
+    callback(error, null);
+  } else {
+    DBHelper.fetchReviewsById(id, (error, reviews) => {
+      self.reviews = reviews;
+      if (!reviews) {
+        fillReviewsHTML(null);
+        return;
+      }
+      fillReviewsHTML();
+    });
+  }
+}
+
+/**
  * Create restaurant HTML and add it to the webpage
  */
 const fillRestaurantHTML = (restaurant = self.restaurant) => {
@@ -71,7 +95,7 @@ const fillRestaurantHTML = (restaurant = self.restaurant) => {
     fillRestaurantHoursHTML();
   }
   // fill reviews
-  fillReviewsHTML();
+  fetchReviewsFromURL();
 }
 
 /**
@@ -99,7 +123,7 @@ const fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hour
 /**
  * Create all reviews HTML and add them to the webpage.
  */
-const fillReviewsHTML = (reviews = self.restaurant.reviews) => {
+const fillReviewsHTML = (reviews = self.reviews) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h3');
   title.innerHTML = 'Reviews';
@@ -128,7 +152,7 @@ const createReviewHTML = (review) => {
   li.appendChild(name);
 
   const date = document.createElement('p');
-  date.innerHTML = review.date;
+  date.innerHTML = moment(review.createdAt).format('ddd, MMM Do YYYY');
   li.appendChild(date);
 
   const rating = document.createElement('p');

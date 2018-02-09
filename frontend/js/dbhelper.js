@@ -9,7 +9,7 @@ class DBHelper {
    */
   static get DATABASE_URL() {
     const port = 1337 // Change this to your server port
-    return `http://localhost:${port}/restaurants`;
+    return `http://localhost:${port}`;
   }
 
   static createIDBStore(restaurants) {
@@ -80,7 +80,7 @@ class DBHelper {
    */
   static fetchRestaurants(callback) {
     if (navigator.onLine) {
-      fetch(DBHelper.DATABASE_URL)
+      fetch(`${DBHelper.DATABASE_URL}/restaurants`)
         .then(res => res.json())
         .then(restaurants => {
           DBHelper.createIDBStore(restaurants); // Cache restaurants
@@ -104,7 +104,8 @@ class DBHelper {
    * Fetch all reviews.
    */
   static fetchReviews(callback) {
-    fetch(`${DBHelper.DATABASE_URL}/reviews`)
+    const url = DBHelper.DATABASE_URL + '/reviews';
+    fetch(url)
       .then(res => res.json())
       .then(reviews => {
         callback(null, reviews);
@@ -119,7 +120,8 @@ class DBHelper {
    * Fetch reviews by id.
    */
   static fetchReviewsById(id, callback) {
-    fetch(`${DBHelper.DATABASE_URL}/reviews/?restaurant_id='${id}'`)
+    const url = DBHelper.DATABASE_URL + '/reviews/?restaurant_id=' + id;
+    fetch(url)
       .then(res => res.json())
       .then(review => {
         callback(null, review);
