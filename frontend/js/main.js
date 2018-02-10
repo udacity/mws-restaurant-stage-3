@@ -171,6 +171,31 @@ const createRestaurantHTML = (restaurant) => {
   name.tabIndex = 4;
   li.append(name);
 
+  const favoriteIcon = document.createElement('span');
+  favoriteIcon.className = 'restaurant-fav';
+
+  const favoriteIconImg = document.createElement('img');
+  if (restaurant.is_favorite) {
+    favoriteIconImg.alt = 'Favorited ' + restaurant.name;
+    favoriteIconImg.setAttribute("data-src", './img/ico-fav.png');
+    favoriteIconImg.className = 'restaurant-fav-icon fav';
+  } else {
+    favoriteIconImg.setAttribute("data-src", './img/ico-fav-o.png');
+    favoriteIconImg.className = 'restaurant-fav-icon fav-not';
+  }
+
+  favoriteIconImg.addEventListener('click', () => {
+    const src = favoriteIconImg.src;
+    if (src.includes('img/ico-fav-o.png')) {
+      favoriteIconImg.src = './img/ico-fav.png';
+    } else {
+      favoriteIconImg.src = './img/ico-fav-o.png';
+    }
+  })
+
+  favoriteIcon.append(favoriteIconImg);
+  name.prepend(favoriteIcon);
+
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
   li.append(neighborhood);
@@ -184,7 +209,7 @@ const createRestaurantHTML = (restaurant) => {
   more.href = DBHelper.urlForRestaurant(restaurant);
   more.tabIndex = 4;
   more.setAttribute('aria-label', 'View Details for ' + restaurant.name + ' Restaurant');
-  li.append(more)
+  li.append(more);
 
   return li
 }

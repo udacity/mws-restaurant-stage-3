@@ -65,6 +65,8 @@
 }
 
 #restaurants-list li h2 {
+  display: flex;
+  align-items: center;
   color: #f18200;
   font-family: Arial, sans-serif;
   font-size: 14pt;
@@ -74,6 +76,19 @@
   margin: 20px 0 10px;
   text-transform: uppercase;
 }
+
+#restaurants-list li h2:focus,
+#restaurants-list li h2:active {
+  outline: none;
+}
+
+.restaurant-fav-icon {
+  height: 22px;
+  width: 22px;
+  margin-top: 3px;
+  margin-right: 8px;
+}
+
 
 #restaurants-list p {
   margin: 0;
