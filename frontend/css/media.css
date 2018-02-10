@@ -36,6 +36,9 @@
   #breadcrumb {
 		width: 100%;
 	}
+  #restaurants-list {
+    grid-template-columns: repeat(auto-fill, 350px);
+  }
 	.inside main {
 		margin-bottom: 0;
 	}

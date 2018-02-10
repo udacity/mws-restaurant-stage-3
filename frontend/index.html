@@ -9,9 +9,9 @@
   <title>Restaurant Reviews</title>
   <link rel='manifest' href='manifest.json'>
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-  <link rel="stylesheet" href="dist/css/styles.min.css">
-  <link rel="stylesheet" href="dist/css/main.min.css">
-  <link rel="stylesheet" href="dist/css/media.min.css">
+  <link rel="preload" as="style" href="dist/css/styles.min.css" onload="this.rel='stylesheet'">
+  <link rel="preload" as="style" href="dist/css/main.min.css" onload="this.rel='stylesheet'">
+  <link rel="preload" as="style" href="dist/css/media.min.css" onload="this.rel='stylesheet'">
 </head>
 
 <body>
@@ -44,7 +44,6 @@
   </footer>
 
   <script async src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.4.1/lazyload.min.js"></script>
-  <script async src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
   <script src="dist/js/dbhelper.min.js"></script>
   <script src="dist/js/main.min.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAV9joqCnYFAVMsAGnSUHjd3BcVb011zAo&libraries=places&callback=initMap"></script>

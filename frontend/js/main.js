@@ -23,10 +23,17 @@ window.initMap = () => {
     lng: -73.987501
   };
 
-  self.map = new google.maps.Map(document.getElementById('map'), {
+  const theMap = document.getElementById('map')
+
+  self.map = new google.maps.Map(theMap, {
     zoom: 12,
     center: loc,
-    scrollwheel: false
+    scrollwheel: false,
+    format: 'jpg'
+  });
+
+  map.addListener('tilesloaded', function () {
+    theMap.querySelectorAll('img').forEach(value => value.alt = "Google Maps Image Tile");
   });
 
   updateRestaurants();

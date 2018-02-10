@@ -14,6 +14,13 @@ window.initMap = () => {
         center: restaurant.latlng,
         scrollwheel: false
       });
+
+      const theMap = document.getElementById('map');
+      
+      self.map.addListener('tilesloaded', function () {
+        theMap.querySelectorAll('img').forEach(value => value.alt = "Google Maps Image Tile");
+      });
+
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
     }

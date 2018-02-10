@@ -2,7 +2,7 @@
 ---
 #### _Three Stage Course Material Project - Restaurant Reviews_
 
-## Project Overview: Stage 2
+## Project Overview: Stage 3
 
 You will build on your project from Restaurant Reviews: Stage 1 by adding offline indexing with IndexedDB and achieving a set of site performance targets as audited with Google Lighthouse.
 
@@ -14,7 +14,7 @@ You will build on your project from Restaurant Reviews: Stage 1 by adding offlin
 ```
 cd server
 ```
-##### Install project dependancies
+##### Install project dependencies
 ```
 # npm i
 ```
@@ -32,19 +32,15 @@ cd server
 ```
 cd frontend
 ```
-##### Check Python version
+##### Install Gulp
 ```
-# python -V
+# npm install gulp-cli -g
 ```
-##### If you have Python 2.x
+##### Install dependencies
 ```
-# python -m SimpleHTTPServer [port]
-```
-##### If you have Python 2.x
-```
-# python3 -m http.server [port]
+# npm install
 ```
 ##### Start the app in browser
 ```
-http://localhost:8000
+# gulp
 ```
