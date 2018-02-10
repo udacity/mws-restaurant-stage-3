@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#252831">
+  <title>Restaurant Info</title>
+  <link rel='manifest' href='manifest.json'>
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <link rel="preload" as="style" href="dist/css/styles.min.css" onload="this.rel='stylesheet'">
+  <link rel="preload" as="style" href="dist/css/restaurant-info.min.css" onload="this.rel='stylesheet'">
+  <link rel="preload" as="style" href="dist/css/media.min.css" onload="this.rel='stylesheet'">
+</head>
+
+<body class="inside">
+  <header>
+    <nav>
+      <h1><a href="/" aria-label="Link to Restaurant Reviews" tabindex="1">Restaurant Reviews</a></h1>
+    </nav>
+    <nav aria-label="breadcrumb">
+      <ul id="breadcrumb" role="navigation">
+        <li><a href="/" aria-label="Link to Home" tabindex="2">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="maincontent" role="main">
+    <section id="map-container" role="application">
+      <div id="map"></div>
+    </section>
+
+    <section id="restaurant-info-container">
+      <section id="restaurant-container">
+        <h2 id="restaurant-name"></h2>
+        <img id="restaurant-img">
+        <p id="restaurant-cuisine"></p>
+        <p id="restaurant-address"></p>
+        <table id="restaurant-hours"></table>
+      </section>
+
+      <section id="reviews-container">
+        <h3>Reviews</h3>
+
+        <section id="restaurant-review-form">
+          <form onsubmit="return reviewRestaurant();" id="review-form">
+            <input type="text" placeholder="Enter your name" id="review-name">
+            <select name="review-rating" id="review-rating">
+              <option value="none" disabled selected>Select Rating</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <textarea name="review-comment" id="review-comment" rows="5" placeholder="Tell us what you think"></textarea>
+            <input type="submit">
+          </form>
+        </section>
+
+        <ul id="reviews-list"></ul>
+      </section>
+
+    </section>
+  </main>
+
+  <footer id="footer">
+    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+  </footer>
+
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.4.1/lazyload.min.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+  <script src="dist/js/dbhelper.min.js"></script>
+  <script src="dist/js/restaurant_info.min.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_tKbW6A5pQ-eupxI56myUnHLqYCzOjKo&libraries=places&callback=initMap"></script>
+
+</body>
+
+</html>
