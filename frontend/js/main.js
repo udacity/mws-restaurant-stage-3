@@ -175,7 +175,7 @@ const createRestaurantHTML = (restaurant) => {
   favoriteIcon.className = 'restaurant-fav';
 
   const favoriteIconImg = document.createElement('img');
-  if (restaurant.is_favorite) {
+  if (restaurant.is_favorite === "true") {
     favoriteIconImg.alt = 'Favorited ' + restaurant.name;
     favoriteIconImg.setAttribute("data-src", './img/ico-fav.png');
     favoriteIconImg.className = 'restaurant-fav-icon fav';
@@ -187,9 +187,13 @@ const createRestaurantHTML = (restaurant) => {
   favoriteIconImg.addEventListener('click', () => {
     const src = favoriteIconImg.src;
     if (src.includes('img/ico-fav-o.png')) {
-      favoriteIconImg.src = './img/ico-fav.png';
+      DBHelper.addRestaurantToFavorites(restaurant.id, true, (err, res) => {
+        favoriteIconImg.src = './img/ico-fav.png';
+      });
     } else {
-      favoriteIconImg.src = './img/ico-fav-o.png';
+      DBHelper.addRestaurantToFavorites(restaurant.id, false, (err, res) => {
+        favoriteIconImg.src = './img/ico-fav-o.png';
+      });
     }
   })
 

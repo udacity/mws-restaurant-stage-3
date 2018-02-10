@@ -174,6 +174,14 @@ class DBHelper {
       })
   }
 
+  static addRestaurantToFavorites(restaurantId, isFav, callback) {
+    const url = DBHelper.DATABASE_URL + '/restaurants/' + restaurantId + '/?is_favorite=' + isFav;
+    fetch(url, { method: 'put' })
+      .then(res => callback(null, 1))
+      .catch(err => callback(err, null));
+  }
+
+
   /**
    * Fetch a restaurant by its ID.
    */

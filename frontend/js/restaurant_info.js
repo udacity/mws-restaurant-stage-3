@@ -76,6 +76,35 @@ const fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
 
+  const favoriteIcon = document.createElement('span');
+  favoriteIcon.className = 'restaurant-fav';
+
+  const favoriteIconImg = document.createElement('img');
+  if (restaurant.is_favorite === "true") {
+    favoriteIconImg.alt = 'Favorited ' + restaurant.name;
+    favoriteIconImg.setAttribute("data-src", './img/ico-fav.png');
+    favoriteIconImg.className = 'restaurant-fav-icon fav';
+  } else {
+    favoriteIconImg.setAttribute("data-src", './img/ico-fav-o.png');
+    favoriteIconImg.className = 'restaurant-fav-icon fav-not';
+  }
+
+  favoriteIconImg.addEventListener('click', () => {
+    const src = favoriteIconImg.src;
+    if (src.includes('img/ico-fav-o.png')) {
+      DBHelper.addRestaurantToFavorites(restaurant.id, true, (err, res) => {
+        favoriteIconImg.src = './img/ico-fav.png';
+      });
+    } else {
+      DBHelper.addRestaurantToFavorites(restaurant.id, false, (err, res) => {
+        favoriteIconImg.src = './img/ico-fav-o.png';
+      });
+    }
+  })
+
+  favoriteIcon.append(favoriteIconImg);
+  name.prepend(favoriteIcon);
+
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
 

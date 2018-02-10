@@ -78,6 +78,8 @@
 }
 
 #restaurant-name {
+  display: flex;
+  align-items: center;
   color: #f18200;
   font-family: Arial, sans-serif;
   font-size: 20pt;
@@ -86,6 +88,19 @@
   text-transform: uppercase;
   line-height: 1.1;
 }
+
+#restaurants-list li h2:focus,
+#restaurants-list li h2:active {
+  outline: none;
+}
+
+.restaurant-fav-icon {
+  height: 32px;
+  width: 32px;
+  margin-top: 3px;
+  margin-right: 8px;
+}
+
 
 #restaurant-img {
   height: auto;
