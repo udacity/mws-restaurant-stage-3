@@ -82,11 +82,6 @@ http://localhost:1337/reviews/
 http://localhost:1337/reviews/<review_id>
 ```
 
-#### Get all reviews for a restaurant
-```
-http://localhost:1337/reviews/?restaurant_id=<restaurant_id>
-```
-
 
 ### POST Endpoints
 
