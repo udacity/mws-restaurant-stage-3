@@ -143,3 +143,26 @@ http://localhost:1337/reviews/<review_id>
 
 If you find a bug in the source code or a mistake in the documentation, you can help us by
 submitting an issue to our [Waffle Dashboard](https://waffle.io/udacity/mwnd-issues). Even better you can submit a Pull Request with a fix :)
+
+
+### Development local Docker image
+
+Given that you have [Docker](https://www.docker.com) installed on your local system.
+You can build a image of this source with the expected server versions for node.js and sails.js version.
+
+
+Open your terminal and navigate into the folder that contains this source code. 
+###### Build local Docker image
+This command builds a new image named mws-restaurant-stage-3 from the current directory.
+```
+docker build -t mws-restaurant-stage-3 .
+```
+
+
+###### Start the server
+Starts image named mws-restaurant-stage-3 and exposes port 1337 outside the container.
+```
+docker run -p 1337:1337 mws-restaurant-stage-3
+```
+
+You should now have access to the server and be able to issue HTTP requests against the API.
