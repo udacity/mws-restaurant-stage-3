@@ -219,6 +219,7 @@
       {
         "name": "Casa Enrique",
         "neighborhood": "Queens",
+        "photograph": "10",
         "address": "5-48 49th Ave, Queens, NY 11101",
         "latlng": {
           "lat": 40.743394,
@@ -248,7 +249,7 @@
         "createdAt": 1504095567183,
         "updatedAt": 1504095567183,
         "rating": 4,
-        "comments": "Mission Chinese Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits â€” the kung pao pastrami, the thrice cooked bacon â€”but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank."
+        "comments": "Mission Chinese Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits — the kung pao pastrami, the thrice cooked bacon —but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank."
       },
       {
         "id": 2,
@@ -302,7 +303,7 @@
         "createdAt": 1504095567183,
         "updatedAt": 1504095567183,
         "rating": 4,
-        "comments": "The tables at this 32nd Street favorite are outfitted with grills for cooking short ribs, brisket, beef tongue, rib eye, and pork jowl. The banchan plates are uniformly good, and Deuki Hongâ€™s menu also includes winning dishes like stir-fried squid noodles, kimchi stew, and seafood pancakes. If itâ€™s available, make sure to order the kimchi and rice â€œlunchbox.â€ Baekjeong is a great place for large groups and birthday parties."
+        "comments": "The tables at this 32nd Street favorite are outfitted with grills for cooking short ribs, brisket, beef tongue, rib eye, and pork jowl. The banchan plates are uniformly good, and Deuki Hong’s menu also includes winning dishes like stir-fried squid noodles, kimchi stew, and seafood pancakes. If it’s available, make sure to order the kimchi and rice “lunchbox.” Baekjeong is a great place for large groups and birthday parties."
       },
       {
         "id": 8,
@@ -329,7 +330,7 @@
         "createdAt": 1504095567183,
         "updatedAt": 1504095567183,
         "rating": 5,
-        "comments": "In 127 years, little has changed at Katz's. It remains one of New York's â€” and the country's â€” essential Jewish delicatessens. Every inch of the massive Lower East Side space smells intensely of pastrami and rye loaves. The sandwiches are massive, so they are best when shared. Order at the counter, and don't forget to tip your slicer â€” your sandwich will be better for it."
+        "comments": "In 127 years, little has changed at Katz's. It remains one of New York's — and the country's — essential Jewish delicatessens. Every inch of the massive Lower East Side space smells intensely of pastrami and rye loaves. The sandwiches are massive, so they are best when shared. Order at the counter, and don't forget to tip your slicer — your sandwich will be better for it."
       },
       {
         "id": 11,
@@ -392,7 +393,7 @@
         "createdAt": 1504095567183,
         "updatedAt": 1504095567183,
         "rating": 4,
-        "comments": "Overall, a great try of New York BBQ. The restaurant dÃ©cor is rustic with a good amount of seats to sit and enjoy the meal. I definitely would love to come back and try that monster of a beef rib!"
+        "comments": "Overall, a great try of New York BBQ. The restaurant décor is rustic with a good amount of seats to sit and enjoy the meal. I definitely would love to come back and try that monster of a beef rib!"
       },
       {
         "id": 18,
@@ -410,7 +411,7 @@
         "createdAt": 1504095567183,
         "updatedAt": 1504095567183,
         "rating": 4,
-        "comments": "Brooks Headleyâ€™s tiny East Village cafe is so much more than a veggie burger spot â€” it's one of the best bang-for-your-buck restaurants in Lower Manhattan. Headley and his crew turn seasonal vegetables into delectable salads and riffs on American comfort food favorites. The specials menu changes daily, and the rest of the menu is constantly evolving. You can get a lot of food to eat here for under $15 per person."
+        "comments": "Brooks Headley’s tiny East Village cafe is so much more than a veggie burger spot — it's one of the best bang-for-your-buck restaurants in Lower Manhattan. Headley and his crew turn seasonal vegetables into delectable salads and riffs on American comfort food favorites. The specials menu changes daily, and the rest of the menu is constantly evolving. You can get a lot of food to eat here for under $15 per person."
       },
       {
         "id": 20,
@@ -437,7 +438,7 @@
         "createdAt": 1504095567183,
         "updatedAt": 1504095567183,
         "rating": 4,
-        "comments": "Over the last five years, The Dutch has turned into the quintessential American restaurant that chef Andrew Carmellini and partners Josh Pickard and Luke Ostrom sought to evoke when it first opened. Itâ€™s a great choice when youâ€™re craving a steak, a burger, or oysters, and the menu always includes plentiful seafood options as well as pastas. The Dutch is now an indelible part of the Soho landscape."
+        "comments": "Over the last five years, The Dutch has turned into the quintessential American restaurant that chef Andrew Carmellini and partners Josh Pickard and Luke Ostrom sought to evoke when it first opened. It’s a great choice when you’re craving a steak, a burger, or oysters, and the menu always includes plentiful seafood options as well as pastas. The Dutch is now an indelible part of the Soho landscape."
       },
       {
         "id": 23,
@@ -446,7 +447,7 @@
         "createdAt": 1504095567183,
         "updatedAt": 1504095567183,
         "rating": 4,
-        "comments": "I randomly came here on a Saturday night. I was pleasantly surprised with the food and the service. We had the calamari and the ceviche with avocado, and then the catfish. Oh! Then we had the banana soufflÃ© for dessert with ice cream. It was all delicious and well put together. Would love to eat here again."
+        "comments": "I randomly came here on a Saturday night. I was pleasantly surprised with the food and the service. We had the calamari and the ceviche with avocado, and then the catfish. Oh! Then we had the banana soufflé for dessert with ice cream. It was all delicious and well put together. Would love to eat here again."
       },
       {
         "id": 24,
@@ -464,7 +465,7 @@
         "createdAt": 1504095567183,
         "updatedAt": 1504095567183,
         "rating": 4,
-        "comments": "Joshua Smooklerâ€™s two-year-old ramen shop serves one of the best tonkotsu broths around. Beyond ramen, Mu also offers some high minded plates, like foie gras-stuffed chicken wings, as well as dry-aged Japanese Wagyu beef specials. Mu is just 10 short minutes away from Midtown via the 7-train."
+        "comments": "Joshua Smookler’s two-year-old ramen shop serves one of the best tonkotsu broths around. Beyond ramen, Mu also offers some high minded plates, like foie gras-stuffed chicken wings, as well as dry-aged Japanese Wagyu beef specials. Mu is just 10 short minutes away from Midtown via the 7-train."
       },
       {
         "id": 26,
