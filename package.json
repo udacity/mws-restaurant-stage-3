@@ -7,7 +7,7 @@
   "dependencies": {
     "include-all": "^1.0.0",
     "rc": "1.0.1",
-    "sails": "^0.12.13",
+    "sails": "^0.12.14",
     "sails-disk": "~0.10.9"
   },
   "scripts": {
