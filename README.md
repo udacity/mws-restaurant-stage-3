@@ -6,7 +6,7 @@ curl "http://localhost:1337/restaurants"
 ```
 #### Get Restaurants by id
 ````
-curl "http://localhost:1337/restaurants/{3}"
+curl "http://localhost:1337/restaurants/<restaurant_id>"
 ````
 
 ## Architecture
