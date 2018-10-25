@@ -62,15 +62,15 @@
         </legend>
         <div class="input-container">
           <label for="username">Name</label>
-          <input type="text" id="username" placeholder="Name..." required/>
+          <input type="text" aria-label="username" id="username" placeholder="Name..." required/>
         </div>
         <div class="input-container">
           <label for="rating">Rating</label>
-          <input type="number" id="rating" min="0" max="10" placeholder="Rating..." required/>
+          <input type="number" aria-label="rating" id="rating" min="0" max="10" placeholder="Rating..." required/>
         </div>
         <div class="input-container">
           <label for="comment">Comment</label>
-          <textarea id="comment" placeholder="Your Message Goes Here...." required></textarea>
+          <textarea id="comment" aria-label="comment" placeholder="Your Message Goes Here...." required></textarea>
         </div>
         <div class="submit">
           <button type="button" onclick="reviewFormHandler(); return false;">Submit</button>
