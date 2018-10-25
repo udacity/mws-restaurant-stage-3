@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <link rel="stylesheet" href="dist/css/styles.css">
+  <title>Restaurant Reviews</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="preconnect" href="https://maps.googleapis.com/" crossorigin />
+  <link rel="preconnect" href="https://maps.gstatic.com/" crossorigin />
+  <link rel="preconnect" href="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNHaVI3t7NVuuyfmLEL3UKdoH8AkGPT-g&libraries=places&callback=initMap"
+        crossorigin />
+
+  <link rel="preload" href="http://localhost:1337/restaurants/" as="fetch" />
+
+  <link rel="preload" href="dist/img/1.webp" as="image" />
+  <link rel="preload" href="dist/img/3.webp" as="image" />
+  <link rel="preload" href="dist/img/2.webp" as="image" />
+  <link rel="preload" href="dist/img/4.webp" as="image" />
+  <link rel="preload" href="dist/img/5.webp" as="image" />
+  <link rel="preload" href="dist/img/6.webp" as="image" />
+  <link rel="preload" href="dist/img/7.webp" as="image" />
+  <link rel="preload" href="dist/img/8.webp" as="image" />
+  <link rel="preload" href="dist/img/9.webp" as="image" />
+  <link rel="preload" href="dist/img/10.webp" as="image" />
+
+  <meta name="theme-color" content="#fdfdfd">
+</head>
+
+<body>
+  <header>
+    <nav role="navigation">
+      <h1><a href="/">Restaurant Reviews</a></h1>
+    </nav>
+  </header>
+
+  <main id="maincontent">
+    <section id="map-container">
+      <div id="map" role="application" tabindex="-1"></div>
+    </section>
+    <section>
+      <div class="filter-options">
+        <h2>Filter Results</h2>
+        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+          <option value="all">All Neighborhoods</option>
+        </select>
+        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+          <option value="all">All Cuisines</option>
+        </select>
+      </div>
+      <ul id="restaurants-list"></ul>
+    </section>
+  </main>
+
+  <script type="application/javascript" charset="utf-8" src="dist/js/dbhelper.js"></script>
+  <script type="application/javascript" charset="utf-8" src="dist/js/main.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNHaVI3t7NVuuyfmLEL3UKdoH8AkGPT-g&libraries=places&callback=initMap"></script>
+
+  <div id="offline-status-box">
+    <p id="offline-status"></p>
+  </div>
+  <footer id="footer">
+    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+  </footer>
+
+</body>
+
+</html>

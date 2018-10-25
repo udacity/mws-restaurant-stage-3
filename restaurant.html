@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Normalize.css for better cross-browser consistency -->
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <!-- Main CSS file -->
+  <link rel="stylesheet" href="dist/css/styles.css">
+
+  <link rel="preconnect" href="https://maps.googleapis.com/" crossorigin />
+  <link rel="preconnect" href="https://maps.gstatic.com/" crossorigin />
+  <link rel="preconnect" href="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNHaVI3t7NVuuyfmLEL3UKdoH8AkGPT-g&libraries=places&callback=initMap"
+        crossorigin />
+
+  <link rel="preload" href="http://localhost:1337/restaurants/" as="fetch" />
+  <title>Restaurant Info</title>
+  <meta name="theme-color" content="#fdfdfd">
+  <link rel="manifest" href="manifest.json" />
+</head>
+
+<body class="inside">
+  <!-- Beginning header -->
+  <header>
+    <!-- Beginning nav -->
+    <nav role="navigation">
+      <h1><a href="/">Restaurant Reviews</a></h1>
+    </nav>
+    <!-- Beginning breadcrumb -->
+    <nav aria-label="Breadcrumb">
+      <ul id="breadcrumb" role="directory">
+        <li><a href="/">Home</a></li>
+      </ul>
+    </nav>
+    <!-- End breadcrumb -->
+    <!-- End nav -->
+  </header>
+  <!-- End header -->
+
+  <!-- Beginning main -->
+  <main id="maincontent">
+    <!-- Beginning map -->
+    <section id="map-container">
+      <div id="map" role="application" tabindex="-1"></div>
+    </section>
+    <!-- End map -->
+    <!-- Beginning restaurant -->
+    <section id="restaurant-container">
+      <h2 id="restaurant-name"></h2>
+      <img alt="restaurant image" id="restaurant-img">
+      <p id="restaurant-cuisine"></p>
+      <p id="restaurant-address"></p>
+      <table id="restaurant-hours"></table>
+    </section>
+    <!-- end restaurant -->
+    <!-- Beginning reviews -->
+    <section id="reviews-container">
+      <form id="reviews-form" action="#">
+        <legend>
+          <h4 id="form-legend">Share your thoughts with Us!</h4>
+        </legend>
+        <div class="input-container">
+          <label for="username">Name</label>
+          <input type="text" id="username" placeholder="Name..." required/>
+        </div>
+        <div class="input-container">
+          <label for="rating">Rating</label>
+          <input type="number" id="rating" min="0" max="10" placeholder="Rating..." required/>
+        </div>
+        <div class="input-container">
+          <label for="comment">Comment</label>
+          <textarea id="comment" placeholder="Your Message Goes Here...." required></textarea>
+        </div>
+        <div class="submit">
+          <button type="button" onclick="reviewFormHandler(); return false;">Submit</button>
+        </div>
+      </form>
+      <ul id="reviews-list"></ul>
+    </section>
+    <!-- End reviews -->
+  </main>
+  <!-- End main -->
+  <div id="offline-status-box">
+    <p id="offline-status"></p>
+  </div>
+  <!-- Beginning footer -->
+  <footer id="footer">
+    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+  </footer>
+  <!-- End footer -->
+
+  <!-- Beginning scripts -->
+  <!-- Database helpers -->
+  <script type="text/javascript" src="dist/js/dbhelper.js"></script>
+  <!-- Main javascript file -->
+  <script type="text/javascript" src="dist/js/restaurant_info.js"></script>
+  <!-- Google Maps -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNHaVI3t7NVuuyfmLEL3UKdoH8AkGPT-g&libraries=places&callback=renderPage"></script>
+  <!-- End scripts -->
+
+</body>
+
+</html>
