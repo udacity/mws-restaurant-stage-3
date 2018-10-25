@@ -143,3 +143,9 @@ http://localhost:1337/reviews/<review_id>
 
 If you find a bug in the source code or a mistake in the documentation, you can help us by
 submitting an issue to our [Waffle Dashboard](https://waffle.io/udacity/mwnd-issues). Even better you can submit a Pull Request with a fix :)
+### to run FRONTEND and SERVER
+```
+gulp
+python -m http.server 8000
+npm start
+```
